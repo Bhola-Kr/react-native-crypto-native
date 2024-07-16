@@ -1,4 +1,4 @@
-package com.cryptonative;
+package com.cryptowithnative;
 
 import androidx.annotation.NonNull;
 
@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CryptoNativePackage implements ReactPackage {
+public class CryptoWithNativePackage implements ReactPackage {
   @NonNull
   @Override
   public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new CryptoNativeModule(reactContext));
+    modules.add(new CryptoWithNativeModule(reactContext));
     return modules;
   }
 

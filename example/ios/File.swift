@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  CryptoNativeExample
+//  CryptoWithNativeExample
 //
 
 import Foundation

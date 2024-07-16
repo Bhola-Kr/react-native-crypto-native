@@ -5532,9 +5532,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.820":
-  version: 1.4.827
-  resolution: "electron-to-chromium@npm:1.4.827"
-  checksum: ce0b6b28d6555b4a1f0341331def5011d0f5c56542f95d114d5cedce218fb4a4415254494322ca40663ce9e9e5590623b0c0c09170838675d602367251bde677
+  version: 1.4.828
+  resolution: "electron-to-chromium@npm:1.4.828"
+  checksum: 5eddb971b6fa849a0279bbcdd026d64cacc77ec68c8c2d9d2776baefac458ec2764b4b65c219fece74fa77d6a9fc426604456ba6e9b865fed57ee6687d5cec71
   languageName: node
   linkType: hard
 
@@ -10878,9 +10878,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-crypto-native-example@workspace:example":
+"react-native-crypto-with-native-example@workspace:example":
   version: 0.0.0-use.local
-  resolution: "react-native-crypto-native-example@workspace:example"
+  resolution: "react-native-crypto-with-native-example@workspace:example"
   dependencies:
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
@@ -10894,9 +10894,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-crypto-native@workspace:.":
+"react-native-crypto-with-native@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-crypto-native@workspace:."
+  resolution: "react-native-crypto-with-native@workspace:."
   dependencies:
     "@commitlint/config-conventional": ^17.0.2
     "@evilmartians/lefthook": ^1.5.0

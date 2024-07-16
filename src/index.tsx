@@ -1,7 +1,7 @@
 import { NativeModules, Platform } from 'react-native';
 
 const LINKING_ERROR =
-  `The package 'react-native-crypto-native' doesn't seem to be linked. Make sure: \n\n` +
+  `The package 'react-native-crypto-with-native' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
@@ -11,8 +11,8 @@ interface CryptoNativeModule {
   decryptString(encryptedString: string, secretKey?: string): Promise<string>;
 }
 
-const CryptoNative: CryptoNativeModule = NativeModules.CryptoNative
-  ? NativeModules.CryptoNative
+const CryptoWithNative: CryptoNativeModule = NativeModules.CryptoWithNative
+  ? NativeModules.CryptoWithNative
   : new Proxy({} as CryptoNativeModule, {
       get() {
         throw new Error(LINKING_ERROR);
@@ -24,7 +24,7 @@ export async function encryptValue(
   secretKey?: string
 ): Promise<string> {
   try {
-    const encryptedText = await CryptoNative.encryptValue(
+    const encryptedText = await CryptoWithNative.encryptValue(
       valuetobeEncrypted,
       secretKey
     );
@@ -39,7 +39,7 @@ export async function decryptString(
   secretKey?: string
 ): Promise<string> {
   try {
-    const decryptedText = await CryptoNative.decryptString(
+    const decryptedText = await CryptoWithNative.decryptString(
       encryptedString,
       secretKey
     );

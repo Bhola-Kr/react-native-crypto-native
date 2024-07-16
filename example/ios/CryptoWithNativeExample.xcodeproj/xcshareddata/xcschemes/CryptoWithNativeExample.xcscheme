@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "CryptoNativeExample.app"
-               BlueprintName = "CryptoNativeExample"
-               ReferencedContainer = "container:CryptoNativeExample.xcodeproj">
+               BuildableName = "CryptoWithNativeExample.app"
+               BlueprintName = "CryptoWithNativeExample"
+               ReferencedContainer = "container:CryptoWithNativeExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "CryptoNativeExampleTests.xctest"
-               BlueprintName = "CryptoNativeExampleTests"
-               ReferencedContainer = "container:CryptoNativeExample.xcodeproj">
+               BuildableName = "CryptoWithNativeExampleTests.xctest"
+               BlueprintName = "CryptoWithNativeExampleTests"
+               ReferencedContainer = "container:CryptoWithNativeExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CryptoNativeExample.app"
-            BlueprintName = "CryptoNativeExample"
-            ReferencedContainer = "container:CryptoNativeExample.xcodeproj">
+            BuildableName = "CryptoWithNativeExample.app"
+            BlueprintName = "CryptoWithNativeExample"
+            ReferencedContainer = "container:CryptoWithNativeExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "CryptoNativeExample.app"
-            BlueprintName = "CryptoNativeExample"
-            ReferencedContainer = "container:CryptoNativeExample.xcodeproj">
+            BuildableName = "CryptoWithNativeExample.app"
+            BlueprintName = "CryptoWithNativeExample"
+            ReferencedContainer = "container:CryptoWithNativeExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

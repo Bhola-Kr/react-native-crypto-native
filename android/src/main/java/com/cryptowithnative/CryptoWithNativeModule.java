@@ -1,4 +1,4 @@
-package com.cryptonative;
+package com.cryptowithnative;
 
 import android.os.Build;
 
@@ -13,11 +13,11 @@ import com.facebook.react.module.annotations.ReactModule;
 
 import java.util.Base64;
 
-@ReactModule(name = CryptoNativeModule.NAME)
-public class CryptoNativeModule extends ReactContextBaseJavaModule {
-  public static final String NAME = "CryptoNative";
+@ReactModule(name = CryptoWithNativeModule.NAME)
+public class CryptoWithNativeModule extends ReactContextBaseJavaModule {
+  public static final String NAME = "CryptoWithNative";
 
-  public CryptoNativeModule(ReactApplicationContext reactContext) {
+  public CryptoWithNativeModule(ReactApplicationContext reactContext) {
     super(reactContext);
   }
 
@@ -26,6 +26,8 @@ public class CryptoNativeModule extends ReactContextBaseJavaModule {
   public String getName() {
     return NAME;
   }
+
+
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @ReactMethod

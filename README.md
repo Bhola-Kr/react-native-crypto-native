@@ -7,13 +7,13 @@ A React Native library for AES encryption and decryption using predefined or cus
 ### Using npm
 
 ```bash
-npm install react-native-crypto-native
+npm install react-native-crypto-with-native
 ```
 
 ### Using yarn
 
 ```bash
-yarn add react-native-crypto-native
+yarn add react-native-crypto-with-native
 ```
 
 ### Linking
@@ -21,7 +21,7 @@ yarn add react-native-crypto-native
 For React Native 0.60 and above, the library should automatically be linked. For older versions, you might need to link it manually.
 
 ```bash
-react-native link react-native-crypto-native
+react-native link react-native-crypto-with-native
 ```
 
 ## Setup for Android
@@ -29,15 +29,15 @@ react-native link react-native-crypto-native
 1. Add the following lines to `android/settings.gradle`:
 
 ```gradle
-include ':react-native-crypto-native'
-project(':react-native-crypto-native').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-crypto-native/android')
+include ':react-native-crypto-with-native'
+project(':react-native-crypto-with-native').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-crypto-with-native/android')
 ```
 
 2. Add the following dependency to `android/app/build.gradle`:
 
 ```gradle
 dependencies {
-    implementation project(':react-native-crypto-native')
+    implementation project(':react-native-crypto-with-native')
 }
 ```
 
@@ -129,5 +129,5 @@ MIT
 
 ```
 
-Replace `"react-native-crypto-native"` with the actual name of your library, and ensure the paths and package names are correctly specified according to your project structure. This `README.md` provides a basic overview and instructions for using your React Native crypto library.
+Replace `"react-native-crypto-with-native"` with the actual name of your library, and ensure the paths and package names are correctly specified according to your project structure. This `README.md` provides a basic overview and instructions for using your React Native crypto library.
 ```

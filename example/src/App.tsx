@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Alert } from 'react-native';
-import { encryptValue, decryptString } from 'react-native-crypto-native';
+import { View, Text, TextInput, Button, Alert, StyleSheet } from 'react-native';
+import { encryptValue, decryptString } from 'react-native-crypto-with-native';
 
 const App = () => {
   const [inputText, setInputText] = useState('');
@@ -27,23 +27,37 @@ const App = () => {
   };
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={styles.container}>
       <TextInput
-        style={{ borderWidth: 1, padding: 10, width: 300, marginBottom: 20 }}
+        style={styles.input}
         placeholder="Enter text to encrypt"
         onChangeText={setInputText}
         value={inputText}
       />
       <Button title="Encrypt" onPress={handleEncrypt} />
-      <Text style={{ marginVertical: 20 }}>
-        Encrypted Text: {encryptedText}
-      </Text>
+      <Text style={styles.result}>Encrypted Text: {encryptedText}</Text>
       <Button title="Decrypt" onPress={handleDecrypt} />
-      <Text style={{ marginVertical: 20 }}>
-        Decrypted Text: {decryptedText}
-      </Text>
+      <Text style={styles.result}>Decrypted Text: {decryptedText}</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  input: {
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 5,
+    width: 300,
+    marginBottom: 20,
+  },
+  result: {
+    marginVertical: 20,
+  },
+});
 
 export default App;

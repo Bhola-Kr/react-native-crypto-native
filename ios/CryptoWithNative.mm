@@ -1,6 +1,7 @@
 #import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_MODULE(CryptoNative, NSObject)
+@interface RCT_EXTERN_MODULE(CryptoWithNative, NSObject)
+
 
 RCT_EXTERN_METHOD(encryptValue:(NSString *)value withSecretKey:(NSString *)secretKey
                   withResolver:(RCTPromiseResolveBlock)resolve

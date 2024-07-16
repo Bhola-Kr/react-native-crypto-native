@@ -1,4 +1,4 @@
-package cryptonative.example
+package cryptowithnative.example
 
 import android.app.Application
 import com.facebook.react.PackageList

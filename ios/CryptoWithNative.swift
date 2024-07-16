@@ -1,5 +1,6 @@
-@objc(CryptoNative)
-class CryptoNative: NSObject {
+@objc(CryptoWithNative)
+class CryptoWithNative: NSObject {
+
     @objc(encryptValue:withSecretKey:withResolver:withRejecter:)
      func encryptValue(value: String, secretKey: String?, resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
          do {
