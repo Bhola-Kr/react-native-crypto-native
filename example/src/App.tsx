@@ -1,30 +1,49 @@
-import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-crypto-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, Button, Alert } from 'react-native';
+import { encryptValue, decryptString } from 'react-native-crypto-native';
 
-export default function App() {
-  const [result, setResult] = useState<number | undefined>();
+const App = () => {
+  const [inputText, setInputText] = useState('');
+  const [encryptedText, setEncryptedText] = useState('');
+  const [decryptedText, setDecryptedText] = useState('');
 
-  useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const handleEncrypt = async () => {
+    try {
+      const encrypted = await encryptValue(inputText);
+      console.log('handleEncrypt -> encrypted', encrypted);
+      setEncryptedText(encrypted);
+    } catch (error) {
+      Alert.alert('Encryption Error', '' + error);
+    }
+  };
+
+  const handleDecrypt = async () => {
+    try {
+      const decrypted = await decryptString(encryptedText);
+      setDecryptedText(decrypted);
+    } catch (error) {
+      Alert.alert('Decryption Error', '' + error);
+    }
+  };
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <TextInput
+        style={{ borderWidth: 1, padding: 10, width: 300, marginBottom: 20 }}
+        placeholder="Enter text to encrypt"
+        onChangeText={setInputText}
+        value={inputText}
+      />
+      <Button title="Encrypt" onPress={handleEncrypt} />
+      <Text style={{ marginVertical: 20 }}>
+        Encrypted Text: {encryptedText}
+      </Text>
+      <Button title="Decrypt" onPress={handleDecrypt} />
+      <Text style={{ marginVertical: 20 }}>
+        Decrypted Text: {decryptedText}
+      </Text>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
+export default App;
