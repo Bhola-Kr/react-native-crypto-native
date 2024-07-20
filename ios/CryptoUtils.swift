@@ -3,6 +3,7 @@ import CryptoKit
 
 class CryptoUtils {
     
+    @available(iOS 13.0, *)
     static func encryptValue(_ value: String, secretKey: String) throws -> String {
         let keyData = Data(base64Encoded: secretKey)!
         let secretKey = SymmetricKey(data: keyData)
@@ -15,6 +16,7 @@ class CryptoUtils {
         return encryptedData.base64EncodedString()
     }
     
+    @available(iOS 13.0, *)
     static func decryptString(_ encryptedString: String, secretKey: String) throws -> String {
         let keyData = Data(base64Encoded: secretKey)!
         let secretKey = SymmetricKey(data: keyData)

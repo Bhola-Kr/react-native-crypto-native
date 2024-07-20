@@ -1,6 +1,7 @@
 @objc(CryptoWithNative)
 class CryptoWithNative: NSObject {
-
+    
+    @available(iOS 13.0, *) 
     @objc(encryptValue:withSecretKey:withResolver:withRejecter:)
      func encryptValue(value: String, secretKey: String?, resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
          do {
@@ -11,7 +12,8 @@ class CryptoWithNative: NSObject {
              reject("Encryption_Error", "Encryption failed", error)
          }
      }
-     
+
+     @available(iOS 13.0, *)
      @objc(decryptString:withSecretKey:withResolver:withRejecter:)
      func decryptString(_ encryptedString: String, secretKey: String?, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: @escaping RCTPromiseRejectBlock) -> Void {
          do {
