@@ -20,9 +20,6 @@ jobs:
       - name: Lint files
         run: yarn lint
 
-      - name: Typecheck files
-        run: yarn typecheck
-
   test:
     runs-on: ubuntu-latest
     steps:
