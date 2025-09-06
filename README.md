@@ -126,8 +126,4 @@ Returns the predefined secret key.
 ## License
 
 MIT
-
-```
-
-Replace `"react-native-crypto-with-native"` with the actual name of your library, and ensure the paths and package names are correctly specified according to your project structure. This `README.md` provides a basic overview and instructions for using your React Native crypto library.
 ```
